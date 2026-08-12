@@ -55,8 +55,8 @@ It doesn't just spit out a 6-digit code — it shows you **exactly how it gets t
 
 ```
 ┌─────────────┐    ┌──────────────────┐    ┌────────────────────┐    ┌───────────────┐
-│  T0 → time   │ →  │  HMAC-SHA1(K, C)  │ →  │  dynamic truncation │ →  │  mod 10^digits │
-│  step counter│    │   20-byte digest  │    │   4-byte slice      │    │   6-digit OTP  │
+│ T0 → time   │ →  │  HMAC-SHA1(K, C) │ →  │  dynamic truncation│ →  │ mod 10^digits │
+│ step counter│    │   20-byte digest │    │   4-byte slice     │    │  6-digit OTP  │
 └─────────────┘    └──────────────────┘    └────────────────────┘    └───────────────┘
 ```
 
